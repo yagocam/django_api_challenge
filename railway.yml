@@ -1,0 +1,7 @@
+build:
+  env:
+    - DJANGO_SETTINGS_MODULE=config.settings.production
+    - COLLECT_STATIC=1
+
+run:
+  web: gunicorn config.wsgi:application
