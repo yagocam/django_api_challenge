@@ -39,6 +39,10 @@ CORS_ALLOW_HEADERS = (
     "x-csrftoken",
     "x-requested-with",
 )
+CORS_ALLOWED_ORIGINS = [
+    "*",
+   "https://master--joyful-quokka-5622ed.netlify.app"
+]
 
 # Application definition
 
