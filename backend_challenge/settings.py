@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'backend',
     'backend_challenge',
     'corsheaders',
     'drf_yasg',
@@ -89,8 +90,8 @@ DATABASES = {
         "NAME": "todolist",
         "USER": "postgres",
         'PASSWORD': "123456",
-        'HOST': 'localhost',
-        'PORT': '5433'
+        'HOST': 'https://web-production-31813.up.railway.app',
+        'PORT': '5432'
 
     }
 }
