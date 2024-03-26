@@ -1,5 +1,5 @@
 django
 django_rest_framework
-corsheaders
+django-cors-headers
 rest_framework_simplejwt
 drf_yasg
