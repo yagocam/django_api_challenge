@@ -12,9 +12,11 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+DATABASE_URL="postgresql://postgres:hfpsZVzycNYsoBHaFMAsyuAHURHBQkZR@monorail.proxy.rlwy.net:26110/railway"
 
 
 # Quick-start development settings - unsuitable for production
@@ -88,18 +90,7 @@ WSGI_APPLICATION = 'backend_challenge.wsgi.application'
 
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": os.environ.get('DB_NAME'),
-        "USER": os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT'),
-        'OPTIONS': {
-            'client_encoding': 'UTF8',
-        },
-
-    }
+    "default": dj_database_url.config(default=DATABASE_URL,conn_max_age=1800)
 }
 
 
