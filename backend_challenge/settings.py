@@ -29,9 +29,7 @@ SECRET_KEY = 'django-insecure-uf*gxqt@z=%6uj&3@fzrp3+#=k5lker!6uc7!eyk8=2+16-+&&
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CORS_ALLOWED_ORIGINS = [
-    'https://web-production-b6639.up.railway.app:7912',
-]
+CORS_ALLOWED_ORIGINS = ['*']
 
 
 # Application definition
