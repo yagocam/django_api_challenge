@@ -35,6 +35,7 @@ schema_view = swagger_get_schema_view(
       description="API documentation for ToDo App",
    ),
    public=True,
+   schemes=['https'],
 )
 
 urlpatterns = [
